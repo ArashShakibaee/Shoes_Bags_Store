@@ -1,0 +1,10 @@
+{
+  "language": "English",
+  "@language": {
+    "description": "The current language"
+  },
+  "welcomeText": "Welcome to our Shoes Store",
+  "@welcomeText": {
+    "description": "This is for Splash Screen"
+  }
+}
