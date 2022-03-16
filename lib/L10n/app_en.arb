@@ -6,5 +6,17 @@
   "welcomeText": "Welcome to our Shoes Store",
   "@welcomeText": {
     "description": "This is for Splash Screen"
+  },
+  "dashboardText": "Dashboard",
+  "@dashboardText": {
+    "description": "This is for appbar title of dashboardScreen"
+  },
+  "shoeText": "Shoes",
+  "@shoeText": {
+    "description": "This is for tabBar title of dashboardScreen"
+  },
+  "bagText": "Bags",
+  "@bagText": {
+    "description": "This is for tabBar title of dashboardScreen"
   }
 }

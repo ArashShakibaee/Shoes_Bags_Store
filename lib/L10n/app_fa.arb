@@ -1,4 +1,7 @@
 {
   "language": "فارسی",
-  "welcomeText": "به فروشگاه اینترنتی ما خوش آمدید"
+  "welcomeText": "به فروشگاه اینترنتی ما خوش آمدید",
+  "dashboardText": "صفحه اصلی",
+  "shoeText": "کفش",
+  "bagText": "کیف"
 }
