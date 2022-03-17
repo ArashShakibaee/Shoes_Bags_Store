@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shoes_store/Values/app_colors.dart';
 
 class CustomIcon extends StatelessWidget {
   EdgeInsetsGeometry? padding ;
@@ -15,7 +16,7 @@ class CustomIcon extends StatelessWidget {
   CustomIcon(
       {Key? key,
       this.onPressed,
-      this.padding,
+      this.padding ,
       required this.isButton,
       required this.isGestureDetector,
       required this.assetName,
@@ -27,31 +28,31 @@ class CustomIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: padding!,
+        padding: padding ?? EdgeInsets.zero,
         child: isButton
             ? isGestureDetector
                 ? GestureDetector(
                     onTap: onPressed,
                     child: SvgPicture.asset(
                       assetName,
-                      height: height,
-                      width: width,
-                      color: color,
+                      height: height ?? 30,
+                      width: width ?? 30,
+                      color: color ?? AppColor.teal,
                     ),
                   )
                 : IconButton(
                     onPressed: onPressed,
                     icon: SvgPicture.asset(
                       assetName,
-                      height: height,
-                      width: width,
-                      color: color,
+                      height: height?? 30,
+                      width: width ?? 30,
+                      color: color ?? AppColor.teal,
                     ))
             : SvgPicture.asset(
                 assetName,
-                height: height,
-                width: width,
-                color: color,
+                height: height ?? 30,
+                width: width ?? 30,
+                color: color ?? AppColor.teal,
               ));
   }
 }

@@ -39,21 +39,20 @@ class _DashboardScreenState extends State<DashboardScreen> {
               onPressed: () {
                 Scaffold.of(context).openDrawer();
               },
-              height: 30,
-              width: 30,
-              color: AppColor.teal,
-              padding: EdgeInsets.zero,
             );
           }),
           centerTitle: true,
           actions: [
-            CustomIcon(
-              onPressed: (){},
-              isButton: true,
-              isGestureDetector: false,
-              assetName: 'images/svg/cart.svg',
-              padding: EdgeInsets.zero,
-              color: AppColor.teal,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4.0),
+              child: CustomIcon(
+                onPressed: (){},
+                isButton: true,
+                isGestureDetector: false,
+                assetName: 'images/svg/cart.svg',
+                width: 40,
+                height: 40,
+              ),
             )
           ],
           bottom: TabBar(

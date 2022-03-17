@@ -3,5 +3,12 @@
   "welcomeText": "به فروشگاه اینترنتی ما خوش آمدید",
   "dashboardText": "صفحه اصلی",
   "shoeText": "کفش",
-  "bagText": "کیف"
+  "bagText": "کیف",
+  "shoesCategory": "دسته بندی کفش ها",
+  "bagsCategory": "دسته بندی کیف ها",
+  "profile": "پروفایل",
+  "favorite": "علاقه مندی ها",
+  "setting": "تنظیمات",
+  "cart": "سبد خرید",
+  "logout": "خروج از حساب کاربری"
 }

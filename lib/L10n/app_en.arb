@@ -18,5 +18,33 @@
   "bagText": "Bags",
   "@bagText": {
     "description": "This is for tabBar title of dashboardScreen"
+  },
+  "shoesCategory": "Shoes Category",
+  "@shoesCategory": {
+    "description": "This is for Drawer Screen"
+  },
+  "profile": "Profile",
+  "@profile": {
+    "description": "This is for Drawer Screen"
+  },
+  "favorite": "Favorite",
+  "@favorite": {
+    "description": "This is for Drawer Screen"
+  },
+  "setting": "Setting",
+  "@setting": {
+    "description": "This is for Drawer Screen"
+  },
+  "logout": "Logout",
+  "@logout": {
+    "description": "This is for Drawer Screen"
+  },
+  "bagsCategory": "Bags Category",
+  "@bagsCategory": {
+    "description": "This is for Drawer Screen"
+  },
+  "cart": "Cart",
+  "@cart": {
+    "description": "This is for Drawer Screen"
   }
 }
