@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:shoes_store/Modules/Authentication/UI/login_screen.dart';
-import 'package:shoes_store/Modules/Authentication/UI/register_screen.dart';
 import 'package:shoes_store/Modules/Drawer/Main/drawer_screen.dart';
 import 'package:shoes_store/Modules/Home/Pages/bags_screen.dart';
 import 'package:shoes_store/Modules/Home/Pages/dashboard_screen.dart';
@@ -12,6 +12,13 @@ import 'L10n/l10n.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
 
 void main(){
+  SystemChrome.setSystemUIOverlayStyle(
+     SystemUiOverlayStyle(
+        systemNavigationBarDividerColor: Colors.grey.shade200,
+        systemNavigationBarColor: Colors.grey.shade200,
+       systemNavigationBarIconBrightness: Brightness.dark
+    ),
+  );
   runApp(const Store());
 }
 
@@ -30,8 +37,7 @@ class Store extends StatelessWidget {
         SplashScreen.routeName : (context) => const SplashScreen(),
         BagsScreen.routeName : (context) => const BagsScreen(),
         ShoesScreen.routeName : (context) => const ShoesScreen(),
-        LoginScreen.routeName : (context) => const LoginScreen(),
-        RegisterScreen.routeName : (context) => const RegisterScreen(),
+        AuthenticationScreen.routeName : (context) => const AuthenticationScreen(),
         DrawerScreen.routeName : (context) => const DrawerScreen(),
         DashboardScreen.routeName : (context) => const DashboardScreen(),
       },

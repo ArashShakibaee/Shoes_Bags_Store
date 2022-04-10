@@ -46,5 +46,77 @@
   "cart": "Cart",
   "@cart": {
     "description": "This is for Drawer Screen"
+  },
+  "name": "Name :",
+  "@name": {
+    "description": "This is for Authentication"
+  },
+  "email": "Email :",
+  "@email": {
+    "description": "This is for Authentication"
+  },
+  "password": "Password :",
+  "@password": {
+    "description": "This is for Authentication"
+  },
+  "nameHint": "Enter your name",
+  "@nameHint": {
+    "description": "This is for Authentication"
+  },
+  "emailHint": "Enter your email address",
+  "@emailHint": {
+    "description": "This is for Authentication"
+  },
+  "passwordHint": "Enter your password",
+  "@passwordHint": {
+    "description": "This is for Authentication"
+  },
+  "registerButton": "Register",
+  "@registerButton": {
+    "description": "This is for Authentication"
+  },
+  "loginButton": "Login",
+  "@loginButton": {
+    "description": "This is for Authentication"
+  },
+  "qHaveAccount": "Do not have account ?",
+  "@qHaveAccount": {
+    "description": "This is an question"
+  },
+  "registerWelcome": "Sign Up For Free, Now",
+  "@registerWelcome": {
+    "description": "This is for Authentication"
+  },
+  "loginWelcome": "Log In to Shoes Store",
+  "@loginWelcome": {
+    "description": "This is for Authentication"
+  },
+  "nameIsRequired": "Username is required",
+  "@nameIsRequired": {
+    "description": "This is for Authentication"
+  },
+  "emailIsRequired": "Email is required",
+  "@emailIsRequired": {
+    "description": "This is for Authentication"
+  },
+  "emailIsNotValid": "Email is not valid",
+  "@emailIsNotValid": {
+    "description": "This is for Authentication"
+  },
+  "passwordIsRequired": "Password is required",
+  "@passwordIsRequired": {
+    "description": "This is for Authentication"
+  },
+  "password8length": "Password must be at least 8 digits long",
+  "@password8length": {
+    "description": "This is for Authentication"
+  },
+  "passwordIsNotValid": "Passwords must have at least one a-z_A-Z",
+  "@passwordIsNotValid": {
+    "description": "This is for Authentication"
+  },
+  "passwordHaveNotNumber": "Passwords must have at least one Number",
+  "@passwordHaveNotNumber": {
+    "description": "This is for Authentication"
   }
 }

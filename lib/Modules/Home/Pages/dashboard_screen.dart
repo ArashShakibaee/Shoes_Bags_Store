@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import 'package:shoes_store/Component/custom_icon.dart';
+import 'package:shoes_store/Modules/Authentication/UI/login_screen.dart';
 import 'package:shoes_store/Modules/Drawer/Main/drawer_screen.dart';
 import 'package:shoes_store/Modules/Home/Pages/bags_screen.dart';
 import 'package:shoes_store/Modules/Home/Pages/shoes_screen.dart';
@@ -25,7 +26,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         backgroundColor: AppColor.lightGrey,
         drawer: const DrawerScreen(),
         appBar: AppBar(
-          elevation: 0,
+          elevation: 4,
           backgroundColor: AppColor.lightGrey,
           title: Text(
             AppLocalizations.of(context)!.dashboardText.toUpperCase(),
@@ -46,7 +47,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 4.0),
               child: CustomIcon(
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.pushNamed(context, AuthenticationScreen.routeName);
+                },
                 isButton: true,
                 isGestureDetector: false,
                 assetName: 'images/svg/cart.svg',
