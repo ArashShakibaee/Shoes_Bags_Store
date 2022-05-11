@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
+import 'package:shoes_store/Component/custom_dialog.dart';
 import 'package:shoes_store/Component/custom_icon.dart';
 import 'package:shoes_store/Modules/Authentication/UI/login_screen.dart';
 import 'package:shoes_store/Modules/Drawer/Main/drawer_screen.dart';
@@ -7,6 +8,8 @@ import 'package:shoes_store/Modules/Home/Pages/bags_screen.dart';
 import 'package:shoes_store/Modules/Home/Pages/shoes_screen.dart';
 import 'package:shoes_store/Values/app_colors.dart';
 import 'package:shoes_store/Values/app_styles.dart';
+
+const String userInfo = '';
 
 class DashboardScreen extends StatefulWidget {
   static const String routeName = 'dashboard-screen';
@@ -47,8 +50,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 4.0),
               child: CustomIcon(
-                onPressed: (){
-                  Navigator.pushNamed(context, AuthenticationScreen.routeName);
+                onPressed: () {
+                  CustomDialog.show(
+                      context: context,
+                      onTapConfirmed: () => Navigator.pushReplacementNamed(
+                          context, AuthenticationScreen.routeName),
+                      title: AppLocalizations.of(context)!.authAlertDialogTitle,
+                      content: AppLocalizations.of(context)!.authAlertDialogContent,
+                      yesButtonText: AppLocalizations.of(context)!.loginButton.toUpperCase(),
+                      noButtonText: AppLocalizations.of(context)!.notForNow.toUpperCase()
+                  );
                 },
                 isButton: true,
                 isGestureDetector: false,
@@ -71,7 +82,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ],
           ),
         ),
-        body: const TabBarView(children: [ShoesScreen(),BagsScreen()]),
+        body: const TabBarView(children: [ShoesScreen(), BagsScreen()]),
       ),
     );
   }

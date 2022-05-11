@@ -107,8 +107,8 @@
   "@passwordIsRequired": {
     "description": "This is for Authentication"
   },
-  "password8length": "Password must be at least 8 digits long",
-  "@password8length": {
+  "password8Length": "Password must be at least 8 digits long",
+  "@password8Length": {
     "description": "This is for Authentication"
   },
   "passwordIsNotValid": "Passwords must have at least one a-z_A-Z",
@@ -118,5 +118,65 @@
   "passwordHaveNotNumber": "Passwords must have at least one Number",
   "@passwordHaveNotNumber": {
     "description": "This is for Authentication"
+  },
+  "authAlertDialogTitle": "Authentication Alert!",
+  "@authAlertDialogTitle": {
+    "description": "This is for some part of app which needs login"
+  },
+  "authAlertDialogContent": "You need to login to pass this section",
+  "@authAlertDialogContent": {
+    "description": "This is for some part of app which needs login"
+  },
+  "notForNow": "maybe later",
+  "@notForNow": {
+    "description": "This is for action of AlertDialog"
+  },
+  "logoutAlertDialogTitle": "Login out !",
+  "@logoutAlertDialogTitle": {
+    "description": "This is for login out of the app"
+  },
+  "logoutAlertDialogContent": "Are you sure you want to logout your account?",
+  "@logoutAlertDialogContent": {
+    "description": "This is for login out of the app"
+  },
+  "yes": "Yes",
+  "@yes": {
+    "description": "short answer"
+  },
+  "no": "No",
+  "@no": {
+    "description": "short answer"
+  },
+  "sneaker": "Sneaker",
+  "@sneaker": {
+    "description": "for Shoes category"
+  },
+  "handsBag": "Hand Bag",
+  "@handBag": {
+    "description": "for Bags category"
+  },
+  "crossBody": "Cross Body",
+  "@crossBody": {
+    "description": "for Bags category"
+  },
+  "bridal": "Bridal",
+  "@bridal": {
+    "description": "for Bags category"
+  },
+  "womenCase": "Women Case",
+  "@womenCase": {
+    "description": "for Bags category"
+  },
+  "nike": "Nike",
+  "@nike": {
+    "description": "name of shoes company"
+  },
+  "royal": "Royal",
+  "@royal": {
+    "description": "name of bags company"
+  },
+  "gucci": "Gucci",
+  "@gucci": {
+    "description": "name of bags company"
   }
 }

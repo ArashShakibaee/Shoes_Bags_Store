@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:shoes_store/Component/custom_dialog.dart';
 import 'package:shoes_store/Component/custom_icon.dart';
+import 'package:shoes_store/Modules/SplashScreen/UI/splash_screen.dart';
+import 'package:shoes_store/Utils/shared_preference.dart';
 import 'package:shoes_store/Values/app_colors.dart';
 import 'package:shoes_store/Values/app_styles.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
@@ -14,6 +18,8 @@ class DrawerScreen extends StatefulWidget {
 }
 
 class _DrawerScreenState extends State<DrawerScreen> {
+  String? email;
+  String? username;
 
   BorderRadius getBorderRadiusOfMainDrawer() {
     if (Localizations.localeOf(context).languageCode == 'fa') {
@@ -31,6 +37,18 @@ class _DrawerScreenState extends State<DrawerScreen> {
     }
   }
 
+  Future<void> getLocalData() async {
+    username = await PrefManager.getUsername();
+    email = await PrefManager.getEmailAddress();
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    getLocalData();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -41,10 +59,12 @@ class _DrawerScreenState extends State<DrawerScreen> {
         children: [
           UserAccountsDrawerHeader(
             accountEmail: Text(
-              'arashshakibaee@gmail.com',
+              email ?? "Email Address",
               style: AppStyle.normalTextStyle,
             ),
-            accountName: Text('ARASH', style: AppStyle.normalTextStyle),
+            accountName: Text(
+                username?.toUpperCase() ?? "Username".toUpperCase(),
+                style: AppStyle.normalTextStyle.copyWith(fontWeight: FontWeight.bold)),
             decoration: BoxDecoration(
                 color: AppColor.grey,
                 borderRadius: getBorderRadiusOfUserAccount()),
@@ -107,11 +127,27 @@ class _DrawerScreenState extends State<DrawerScreen> {
             endIndent: 32,
           ),
           CustomDrawerTile(
-              onTab: () {},
+              onTab: _handleLogoutButton,
               text: AppLocalizations.of(context)!.logout,
               imageAsset: 'images/svg/arrow-point.svg')
         ],
       ),
+    );
+  }
+
+  void _handleLogoutButton() async {
+    final SharedPreferences preferences = await SharedPreferences.getInstance();
+    CustomDialog.show(
+        context: context,
+        onTapConfirmed: () {
+          preferences.remove('emailAddress');
+          preferences.remove('username');
+          Navigator.pushReplacementNamed(context, SplashScreen.routeName);
+        },
+        title: AppLocalizations.of(context)!.logoutAlertDialogTitle,
+        content: AppLocalizations.of(context)!.logoutAlertDialogContent,
+        yesButtonText: AppLocalizations.of(context)!.yes.toUpperCase(),
+        noButtonText: AppLocalizations.of(context)!.no.toUpperCase()
     );
   }
 }
@@ -131,7 +167,7 @@ class CustomDrawerTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-        onTap: () {},
+        onTap: onTab,
         title: Text(text,
             style: AppStyle.normalTextStyle.copyWith(color: AppColor.deepGrey)),
         leading: CustomIcon(

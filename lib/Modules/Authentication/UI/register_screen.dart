@@ -4,6 +4,8 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoes_store/Component/custom_text_field.dart';
 import 'package:shoes_store/Modules/Authentication/Validators/validators.dart';
+import 'package:shoes_store/Modules/Home/Pages/dashboard_screen.dart';
+import 'package:shoes_store/Utils/shared_preference.dart';
 
 class RegisterScreen extends StatefulWidget {
   final VoidCallback onPressedIcon;
@@ -130,10 +132,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 
   void onPressedRegisterButton(BuildContext context) {
+    final String username = nameController.text;
+    final String email = emailController.text;
+    PrefManager.setUsername(username);
+    PrefManager.setEmailAddress(email);
     final form = _formKey.currentState?.validate();
      if (form != null && form) {
       ScaffoldMessenger.of(context)
           .showSnackBar(const SnackBar(content: Text('yo')));
+      Navigator.pushReplacementNamed(context, DashboardScreen.routeName);
     }
   }
 }

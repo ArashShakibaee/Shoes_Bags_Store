@@ -19,7 +19,7 @@ class Validators {
   static MultiValidator passwordValidator (BuildContext context){
     return  MultiValidator([
       RequiredValidator(errorText: AppLocalizations.of(context)!.passwordIsRequired),
-      MinLengthValidator(8, errorText: AppLocalizations.of(context)!.password8length),
+      MinLengthValidator(8, errorText: AppLocalizations.of(context)!.password8Length),
       PatternValidator(r"^(?=.*?[A-Z])(?=.*?[a-z]).{6,}$",
           errorText: AppLocalizations.of(context)!.passwordIsNotValid),
       PatternValidator(r"^(?=.*?[0-9]).{6,}$",

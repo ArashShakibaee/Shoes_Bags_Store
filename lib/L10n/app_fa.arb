@@ -28,5 +28,20 @@
   "passwordIsRequired": "رمزعبور ضروری است",
   "password8Length": "رمزعبور باید حاوی هشت حرف باشد",
   "passwordIsNotValid": "رمزعبور حاوی کلمات انگلیسی a-z و A-Z",
-  "passwordHaveNotNumber": "رمزعبور باید حاوی حداقل یک عدد باشد"
+  "passwordHaveNotNumber": "رمزعبور باید حاوی حداقل یک عدد باشد",
+  "authAlertDialogTitle": "هشدار احراز هویت",
+  "authAlertDialogContent": "برای رد شدن از این بخش ، شما باید ورود/ثبت نام کنید",
+  "notForNow": "باشه برای بعد",
+  "logoutAlertDialogTitle": "خارج شدن از حساب",
+  "logoutAlertDialogContent": "آیا مطمئن هستید میخواهید از حساب کاربری خود خارج شوید؟",
+  "yes": "بله",
+  "no": "خیر",
+  "sneaker": "کفش ورزشی",
+  "nike": "نایک",
+  "handsBag": "کیف دستی",
+  "crossBody": "کیف بند دار",
+  "bridal": "کیف عروس",
+  "womenCase": "کیف زنانه",
+  "royal": "رویال",
+  "gucci": "گوسی"
 }

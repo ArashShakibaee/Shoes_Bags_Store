@@ -4,6 +4,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:shoes_store/Component/custom_text_field.dart';
 import 'package:shoes_store/Modules/Authentication/UI/register_screen.dart';
 import 'package:shoes_store/Modules/Authentication/Validators/validators.dart';
+import 'package:shoes_store/Utils/shared_preference.dart';
 import 'package:shoes_store/Values/app_colors.dart';
 import 'package:shoes_store/Values/app_styles.dart';
 
@@ -191,6 +192,8 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
   }
 
   void onPressedLoginButton() {
+    final String email = emailController.text;
+    PrefManager.setEmailAddress(email);
     final form = _formKey.currentState?.validate();
     if (form != null && form) {
       ScaffoldMessenger.of(context)
