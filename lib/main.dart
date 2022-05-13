@@ -30,6 +30,7 @@ class Store extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        primarySwatch: Colors.teal,
         textTheme: PersianFonts.vazirTextTheme,
       ),
       initialRoute: SplashScreen.routeName,

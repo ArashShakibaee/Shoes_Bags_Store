@@ -4,6 +4,7 @@ import 'package:shoes_store/Values/app_colors.dart';
 
 class CustomIcon extends StatelessWidget {
   EdgeInsetsGeometry? padding ;
+  EdgeInsetsGeometry? margin ;
   final bool isButton;
   final bool isGestureDetector;
   final VoidCallback? onPressed;
@@ -16,6 +17,7 @@ class CustomIcon extends StatelessWidget {
       {Key? key,
       this.onPressed,
       this.padding ,
+      this.margin,
       required this.isButton,
       required this.isGestureDetector,
       required this.assetName,
@@ -26,7 +28,8 @@ class CustomIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
+        margin: margin ?? EdgeInsets.zero,
         padding: padding ?? EdgeInsets.zero,
         child: isButton
             ? isGestureDetector

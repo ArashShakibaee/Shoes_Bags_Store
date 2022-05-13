@@ -5,6 +5,7 @@ import 'package:shoes_store/Component/detail_screen_shadow.dart';
 import 'package:shoes_store/Component/size_button.dart';
 import 'package:shoes_store/Utils/item.dart';
 import 'package:shoes_store/Values/app_styles.dart';
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
 
 class DetailShoesScreen extends StatefulWidget {
   static const String routeName = 'detail_shoes_screen';
@@ -110,7 +111,7 @@ class _DetailShoesScreenState extends State<DetailShoesScreen> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Text(
-                          'Size',
+                          AppLocalizations.of(context)!.shoeSize,
                           style: AppStyle.normalTextStyle.copyWith(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -134,7 +135,7 @@ class _DetailShoesScreenState extends State<DetailShoesScreen> {
                           width: MediaQuery.of(context).size.width * 0.9,
                           child: ElevatedButton(
                             onPressed: () {},
-                            child: const Text('Buy Now'),
+                            child:Text(AppLocalizations.of(context)!.buyButton),
                             style: ElevatedButton.styleFrom(
                                 padding: const EdgeInsets.all(12),
                                 shape: RoundedRectangleBorder(

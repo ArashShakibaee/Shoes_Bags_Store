@@ -178,5 +178,29 @@
   "gucci": "Gucci",
   "@gucci": {
     "description": "name of bags company"
+  },
+  "price": "100$",
+  "@price": {
+    "description": "price"
+  },
+  "buyButton": "Buy now",
+  "@buyButton": {
+    "description": "text of but button"
+  },
+  "shoeSize": "Size",
+  "@shoeSize": {
+    "description": "title for peaking size of shoes"
+  },
+  "titleDescription": "Description",
+  "@titleDescription": {
+    "description": "description of products"
+  },
+  "bodyDescription": "It is a long established fact that a reader will be distracted by the readable content of a page",
+  "@bodyDescription": {
+    "description": "body of description"
+  },
+  "quantity": "Quantity",
+  "@quantity": {
+    "description": "this is a part whom comes after description"
   }
 }
